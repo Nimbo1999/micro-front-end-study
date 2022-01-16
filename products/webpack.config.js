@@ -15,7 +15,11 @@ module.exports = {
                 './ProductsIndex': path.join(__dirname, 'src', 'index')
             },
             shared: {
-                faker: '^5.1.0'
+                faker: {
+                    singleton: true,
+                    version: '^5.1.0',
+                    requiredVersion: '^5.0.0'
+                }
             }
         }),
         new HtmlWebpackPlugin({
